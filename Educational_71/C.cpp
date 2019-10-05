@@ -2,9 +2,9 @@
 using namespace std;
 #define endl "\n"
 #define ll long long
-
-
-
+ 
+ 
+ 
 ll contazeros(string s, ll i, ll n) {
    ll cnt = 0;
    while (s[i] == '0' && i < n) {
@@ -13,7 +13,7 @@ ll contazeros(string s, ll i, ll n) {
    }
    return cnt;
 }
-
+ 
 ll contauns(string s, ll i, ll n) {
    ll cnt = 0;
    while (s[i] == '1' && i < n) {
@@ -22,7 +22,7 @@ ll contauns(string s, ll i, ll n) {
    }
    return cnt;
 }
-
+ 
 int main() {
     ll t;
     cin >> t;
@@ -34,8 +34,8 @@ int main() {
        ll tot = 0;
        tot +=  b;
        ll i = 0;
-
-
+ 
+ 
       ll cnt = contazeros(s, i, n);
       i += cnt;
       if (i == n) tot += cnt*(a + b);
@@ -49,7 +49,7 @@ int main() {
             i += cnt;
          } else {
             cnt = contazeros(s, i, n);
-
+ 
             if (i + cnt == n) {
                tot += 2*a + b + (cnt-1)*(a+b);
             } else if (cnt < 2) tot += a + 2*b;
@@ -65,8 +65,6 @@ int main() {
       cout << tot << endl;
     }
     
-
+ 
     return 0;
 }
-
-
